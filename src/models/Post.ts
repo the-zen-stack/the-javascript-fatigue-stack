@@ -1,6 +1,6 @@
-import { Post } from '../types/index.js';
+import type { Post } from '../types/index.ts';
 
-class PostModel {
+export class PostModel {
   private posts: Post[];
 
   constructor() {
@@ -29,5 +29,3 @@ class PostModel {
     return this.posts.find((post) => post.id === id);
   }
 }
-
-export default new PostModel();

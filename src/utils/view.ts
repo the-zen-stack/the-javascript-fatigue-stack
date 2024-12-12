@@ -1,11 +1,11 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { ViewData } from '../types/index.js';
+import type { ViewData } from '../types/index.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-class View {
+export class View {
   private layoutCache: string | null = null;
 
   async getLayout(): Promise<string> {
@@ -17,36 +17,25 @@ class View {
 
   async render(template: string, data: ViewData = {}): Promise<string> {
     const layout = await this.getLayout();
-    const content = await readFile(
-      join(__dirname, `../views/${template}.html`),
-      'utf8'
-    );
+    const content = await readFile(join(__dirname, `../views/${template}.html`), 'utf8');
 
     let html = content;
     if (data.posts) {
-      const postTemplate = await readFile(
-        join(__dirname, '../views/partials/post.html'),
-        'utf8'
-      );
-      const postsHtml = data.posts
-        .map(post => this.renderTemplate(postTemplate, post))
-        .join('');
+      const postTemplate = await readFile(join(__dirname, '../views/partials/post.html'), 'utf8');
+      const postsHtml = data.posts.map((post) => this.renderTemplate(postTemplate, post)).join('');
       html = this.renderTemplate(html, { posts: postsHtml });
     }
 
     const pageName = template.replace('/', '-');
-    
+
     return this.renderTemplate(layout, {
       content: html,
       title: template.charAt(0).toUpperCase() + template.slice(1),
-      page: pageName
+      page: pageName,
     });
   }
 
   renderTemplate(template: string, data: Record<string, unknown>): string {
-    return template.replace(/\{\{(\w+)\}\}/g, (_, key) => 
-      String(data[key] ?? ''));
+    return template.replace(/\{\{(\w+)\}\}/g, (_, key) => String(data[key] ?? ''));
   }
 }
-
-export const view = new View();

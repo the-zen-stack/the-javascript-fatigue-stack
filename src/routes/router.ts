@@ -1,9 +1,9 @@
 import { parse } from 'node:url';
-import { IncomingMessage, ServerResponse } from 'node:http';
-import { postController } from '../controllers/postController.js';
-import { staticController } from '../controllers/staticController.js';
+import type { IncomingMessage, ServerResponse } from 'node:http';
+import { postController } from '../controllers/postController.ts';
+import { StaticController } from '../controllers/staticController.ts';
 
-class Router {
+export class Router {
   async handle(req: IncomingMessage, res: ServerResponse): Promise<void> {
     const parsedUrl = parse(req.url ?? '', true);
     const path = parsedUrl.pathname ?? '/';
@@ -11,6 +11,7 @@ class Router {
 
     // Static file handling
     if (path.startsWith('/static/')) {
+      const staticController = new StaticController();
       return staticController.serveStatic(req, res, path);
     }
 
@@ -18,7 +19,7 @@ class Router {
     const routes: Record<string, (req: IncomingMessage, res: ServerResponse) => Promise<void>> = {
       'GET /': postController.home.bind(postController),
       'GET /new': postController.newPostForm.bind(postController),
-      'POST /new': postController.createPost.bind(postController)
+      'POST /new': postController.createPost.bind(postController),
     };
 
     const route = `${method} ${path}`;
@@ -33,5 +34,3 @@ class Router {
     }
   }
 }
-
-export const router = new Router();

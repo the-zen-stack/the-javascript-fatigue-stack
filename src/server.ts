@@ -1,8 +1,10 @@
-import { createServer, IncomingMessage, ServerResponse } from 'node:http';
-import { router } from './routes/router.js';
+import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
+import { Router } from './routes/router.ts';
+console.log('#', Router);
 
 const server = createServer(async (req: IncomingMessage, res: ServerResponse) => {
   try {
+    const router = new Router();
     await router.handle(req, res);
   } catch (error) {
     console.error('Server error:', error);

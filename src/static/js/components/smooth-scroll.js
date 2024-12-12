@@ -1,12 +1,13 @@
 import { $$ } from '../utils/dom.js';
 
 export function initializeSmoothScroll() {
-  $$('a[href^="#"]').forEach(anchor => {
+  const anchors = $$('a[href^="#"]');
+  for (const anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     });
-  });
+  }
 }
