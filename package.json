@@ -1,0 +1,23 @@
+{
+  "name": "node-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --watch --loader ts-node/esm src/server.ts",
+    "dev": "node --watch --experimental-strip-types src/server.ts",
+    "test": "node --test --experimental-specifier-resolution=node --loader @types/node/loader.js src/**/*.test.ts",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.2",
+    "typescript": "^5.3.3"
+  }
+}

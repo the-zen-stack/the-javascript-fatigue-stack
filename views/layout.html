@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}} - Blog</title>
+  <link rel="stylesheet" href="/static/css/base.css">
+  <link rel="stylesheet" href="/static/css/components/buttons.css">
+  <link rel="stylesheet" href="/static/css/components/forms.css">
+  <link rel="stylesheet" href="/static/css/pages/{{page}}.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="/" class="nav-brand">Blog</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/new">New Post</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    {{content}}
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Blog. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="/static/js/pages/{{page}}.js"></script>
+</body>
+</html>
