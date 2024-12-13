@@ -46,8 +46,8 @@ export class StaticFilesHandler {
 					headers["Cache-Control"] = "public, max-age=31536000, immutable";
 				} else {
 					headers["Cache-Control"] = "no-cache, no-store, must-revalidate";
-					headers["Pragma"] = "no-cache";
-					headers["Expires"] = "0";
+					headers.Pragma = "no-cache";
+					headers.Expires = "0";
 				}
 
 				res.writeHead(200, headers);
@@ -67,8 +67,8 @@ export class StaticFilesHandler {
 				headers["Cache-Control"] = "public, max-age=31536000, immutable";
 			} else {
 				headers["Cache-Control"] = "no-cache, no-store, must-revalidate";
-				headers["Pragma"] = "no-cache";
-				headers["Expires"] = "0";
+				headers.Pragma = "no-cache";
+				headers.Expires = "0";
 			}
 
 			res.writeHead(200, headers);
