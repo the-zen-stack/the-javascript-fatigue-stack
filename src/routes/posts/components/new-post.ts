@@ -33,22 +33,31 @@ const NewPostScript = /*js*/ `
 `;
 
 const newPostId = createSelector("new-post");
+const btnId = createSelector("btn");
 
 const NewPostStyle = /*css*/ `
 .${newPostId} {
   max-width: 800px;
   margin: 0 auto;
-  background: white;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .${newPostId} h1 {
-  color: #2c3e50;
+  color: var(--color-text-primary);
   margin-bottom: 2rem;
   text-align: center;
-}`;
+}
+
+.${btnId} {
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+`;
 
 export const NewPost = (): string => /*html*/ `
 <div class="${newPostId}">
@@ -62,7 +71,7 @@ export const NewPost = (): string => /*html*/ `
       <label for="content">Content</label>
       <textarea id="content" name="content" placeholder="Post Content" required></textarea>
     </div>
-    <button type="submit" class="btn">Create Post</button>
+    <button type="submit" class="${btnId}">Create Post</button>
   </form>
 </div>
 <script type="text/javascript">

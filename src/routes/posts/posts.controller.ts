@@ -1,5 +1,4 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { render } from "../../core/render.core.ts";
 import { NewPost } from "./components/new-post.ts";
 import { Posts } from "./components/posts.ts";
 import { PostsPage } from "./pages/posts.page.ts";
@@ -12,7 +11,8 @@ export class PostController {
 		const posts = postModel.getAllPosts();
 		const html = PostsPage({ title: "Posts", content: Posts({ posts }) });
 
-		render(req, res, html);
+		res.writeHead(200, { "Content-Type": "text/html" });
+		res.end(html);
 	}
 
 	async newPostForm(req: IncomingMessage, res: ServerResponse): Promise<void> {
@@ -21,7 +21,8 @@ export class PostController {
 			content: NewPost(),
 		});
 
-		render(req, res, html);
+		res.writeHead(200, { "Content-Type": "text/html" });
+		res.end(html);
 	}
 
 	async createPost(req: IncomingMessage, res: ServerResponse): Promise<void> {

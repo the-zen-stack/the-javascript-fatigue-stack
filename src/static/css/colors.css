@@ -1,19 +1,32 @@
 :root {
-    /* Core Color Definitions */
-    --color-primary: light-dark(#2196f3, #4CAF50);
-    --color-primary-variant: light-dark(#1976d2, #388E3C);
+    /* Core Color Definitions with More Consistent Contrast */
+    color-scheme: light;
+
+    /* Primary Colors */
+    --color-primary: light-dark(#1565c0, #1565c0);
+    --color-primary-variant: light-dark(#0d47a1, #0d47a1);
     
+    /* Background and Surface */
     --color-background: light-dark(#ffffff, #121212);
-    --color-surface: light-dark(#f4f6f7, #1E1E1E);
+    --color-surface: light-dark(#f5f5f5, #1e1e1e);
     
-    --color-text-primary: light-dark(#17202a, #e0e0e0);
-    --color-text-secondary: light-dark(#2c3e50, #b0b0b0);
+    /* Text Colors */
+    --color-text-primary: light-dark(#212121, #f5f5f5);
+    --color-text-secondary: light-dark(#424242, #b0b0b0);
     
-    --color-success: light-dark(#4CAF50, #81C784);
-    --color-danger: light-dark(#F44336, #E57373);
-    --color-warning: light-dark(#FF9800, #FFB74D);
-    --color-info: light-dark(#2196F3, #64B5F6);
+    /* Semantic Colors */
+    --color-success: light-dark(#2e7d32, #66bb6a);
+    --color-danger: light-dark(#c62828, #ef5350);
+    --color-warning: light-dark(#f57f17, #ffb74d);
+    --color-info: light-dark(#1976d2, #64b5f6);
+
+    /* Neutral Border Colors */
+    --color-border: light-dark(#e0e0e0, #424242);
     
     /* Transition */
     --transition-speed: 0.3s;
+}
+
+.dark-mode {
+    color-scheme: dark;
 }

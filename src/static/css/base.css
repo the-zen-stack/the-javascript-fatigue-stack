@@ -48,7 +48,7 @@ input,
 textarea {
 	width: 100%;
 	padding: 1rem;
-	border: 2px solid light-dark(#e0e4e8, #333);
+	border: 2px solid var(--color-border);
 	border-radius: 8px;
 	font-size: 1rem;
 	background-color: var(--color-surface);
@@ -67,15 +67,6 @@ textarea:focus {
 textarea {
 	height: 180px;
 	resize: vertical;
-}
-
-/* Footer */
-.footer {
-	text-align: center;
-	padding: 2.5rem;
-	background-color: var(--color-text-primary);
-	color: var(--color-background);
-	font-weight: 300;
 }
 
 /* Responsive adjustments */

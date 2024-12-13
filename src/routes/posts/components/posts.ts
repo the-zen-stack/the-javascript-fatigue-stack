@@ -7,9 +7,10 @@ type PostProps = {
 };
 
 const postId = createSelector("post");
+const postsId = createSelector("posts");
+
 const btnLikeId = createSelector("btnLikeId");
 const likesCountClass = createSelector("likesCount");
-const postsId = createSelector("posts");
 
 const PostsStyle = /*css*/ `
 .${postsId}-grid {
@@ -22,6 +23,7 @@ const PostsStyle = /*css*/ `
 .${postId} {
   background: var(--color-background);
   padding: 1.5rem;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s;
@@ -66,7 +68,7 @@ const SinglePost = ({ title, content }: PostProps): string => /*html*/ `
 <article class="${postId}">
   <h2>${title}</h2>
   <p>${content}</p>
-  <button class="${btnLikeId}" data-post-id="{{id}}">
+  <button class="${btnLikeId}">
     <span class="${likesCountClass}">0</span> Likes
   </button>
 </article>
