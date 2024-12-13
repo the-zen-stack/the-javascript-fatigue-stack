@@ -20,7 +20,7 @@ const PostsStyle = /*css*/ `
 }
 
 .${postId} {
-  background: white;
+  background: var(--color-background);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -32,23 +32,19 @@ const PostsStyle = /*css*/ `
 }
 
 .${postId} h2 {
-  color: #2c3e50;
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
 .${btnLikeId} {
   color: white;
-  background: var(--primary-color);
+  background: var(--color-primary);
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 1rem;
   transition: background-color 0.3s;
-}
-
-.${btnLikeId}:hover {
-  background-color: #c0392b;
 }
 `;
 

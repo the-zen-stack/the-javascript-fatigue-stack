@@ -1,7 +1,7 @@
 .navbar {
-	background-color: var(--text-dark);
+	background-color: var(--color-surface);
 	padding: 1rem 0;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -17,7 +17,7 @@
 }
 
 .nav-brand {
-	color: var(--white);
+	color: var(--color-text-primary);
 	font-size: 1.75rem;
 	text-decoration: none;
 	font-weight: 700;
@@ -25,11 +25,13 @@
 }
 
 .nav-links a {
-	color: var(--white);
+	color: var(--color-text-secondary);
 	text-decoration: none;
 	margin-left: 1.5rem;
 	position: relative;
-	transition: color var(--transition-speed) ease;
+	transition: 
+		color var(--transition-speed) ease,
+		opacity var(--transition-speed) ease;
 }
 
 .nav-links a::after {
@@ -39,12 +41,12 @@
 	height: 2px;
 	bottom: -5px;
 	left: 0;
-	background-color: var(--primary-color);
+	background-color: var(--color-primary);
 	transition: width var(--transition-speed) ease;
 }
 
 .nav-links a:hover {
-	color: var(--primary-color);
+	color: var(--color-primary);
 }
 
 .nav-links a:hover::after {

@@ -1,8 +1,19 @@
 :root {
-	--primary-color: #3498db;
-	--secondary-color: #2980b9;
-	--background-light: #f4f6f7;
-	--text-dark: #2c3e50;
-	--white: #ffffff;
-	--transition-speed: 0.3s;
+    /* Core Color Definitions */
+    --color-primary: light-dark(#2196f3, #4CAF50);
+    --color-primary-variant: light-dark(#1976d2, #388E3C);
+    
+    --color-background: light-dark(#ffffff, #121212);
+    --color-surface: light-dark(#f4f6f7, #1E1E1E);
+    
+    --color-text-primary: light-dark(#17202a, #e0e0e0);
+    --color-text-secondary: light-dark(#2c3e50, #b0b0b0);
+    
+    --color-success: light-dark(#4CAF50, #81C784);
+    --color-danger: light-dark(#F44336, #E57373);
+    --color-warning: light-dark(#FF9800, #FFB74D);
+    --color-info: light-dark(#2196F3, #64B5F6);
+    
+    /* Transition */
+    --transition-speed: 0.3s;
 }
