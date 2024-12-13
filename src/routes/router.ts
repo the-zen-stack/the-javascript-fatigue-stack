@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { parse } from 'node:url';
-import { postsRoutes } from './routes/posts/posts.routes.ts';
-import { staticRoutes } from './routes/static/staticRoutes.ts';
+import { postsRoutes } from './posts/posts.routes.ts';
+import { staticRoutes } from './static/staticRoutes.ts';
 
 export class Router {
   async handle(req: IncomingMessage, res: ServerResponse): Promise<void> {
@@ -14,8 +14,6 @@ export class Router {
       ...postsRoutes,
       ...staticRoutes,
     };
-
-    console.log('routes', routes);
 
     const route = `${method} ${path}`;
     const handler = routes[route];

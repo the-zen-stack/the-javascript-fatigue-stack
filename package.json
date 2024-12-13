@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node --watch --loader ts-node/esm src/server.ts",
-    "dev": "node --watch --experimental-strip-types src/server.ts",
+    "prod": "NODE_ENV=production node --experimental-strip-types src/server.ts",
+    "dev": "NODE_ENV=development node --watch --experimental-strip-types src/server.ts",
     "test": "node --test --experimental-specifier-resolution=node --loader @types/node/loader.js src/**/*.test.ts",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"src/**/*.ts\"",

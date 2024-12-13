@@ -37,7 +37,6 @@ export class PostsView extends CurlyBracesRenderer {
     const layout = await this.getLayout('./html/posts.layout.html');
     const content = await readFile(join(__dirname, `./html/new-post.page.html`), 'utf8');
 
-    console.log('123123');
     return this.renderTemplate(layout, {
       content,
       title: 'New Post',
