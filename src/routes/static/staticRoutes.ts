@@ -9,6 +9,6 @@ export const staticRoutes: Record<
   string,
   (req: IncomingMessage, res: ServerResponse) => Promise<void>
 > = staticHandler.serveFiles(
-  ['/css/base.css', '/css/buttons.css', '/css/forms.css', '/css/style.css'],
+  ['/css/base.css', '/css/buttons.css', '/css/forms.css', '/css/colors.css', '/css/navigation.css'],
   { prefix: '/static', dirName: __dirname }
 );

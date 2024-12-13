@@ -1,14 +1,4 @@
-/* Button styles */
-.btn {
-  background-color: #3498db;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
+@import "base.css";
 
 .btn:hover {
   background-color: #2980b9;
