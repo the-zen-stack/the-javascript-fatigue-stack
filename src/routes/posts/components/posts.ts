@@ -1,15 +1,15 @@
-import { createSelector } from '../../../core/id.core.ts';
-import { type Post } from '../posts.types.ts';
+import { createSelector } from "../../../core/id.core.ts";
+import type { Post } from "../posts.types.ts";
 
 type PostProps = {
-  title: string;
-  content: string;
+	title: string;
+	content: string;
 };
 
-const postId = createSelector('post');
-const btnLikeId = createSelector('btnLikeId');
-const likesCountClass = createSelector('likesCount');
-const postsId = createSelector('posts');
+const postId = createSelector("post");
+const btnLikeId = createSelector("btnLikeId");
+const likesCountClass = createSelector("likesCount");
+const postsId = createSelector("posts");
 
 const PostsStyle = /*css*/ `
 .${postsId}-grid {
@@ -66,7 +66,7 @@ for (const button of buttons) {
 }
 `;
 
-const SinglePost = ({ title, content }: PostProps) => /*html*/ `
+const SinglePost = ({ title, content }: PostProps): string => /*html*/ `
 <article class="${postId}">
   <h2>${title}</h2>
   <p>${content}</p>
@@ -76,11 +76,11 @@ const SinglePost = ({ title, content }: PostProps) => /*html*/ `
 </article>
 `;
 
-export const Posts = ({ posts }: { posts: Post[] }) => /*html*/ `
+export const Posts = ({ posts }: { posts: Post[] }): string => /*html*/ `
 <div class="${postsId}">
     <h1>Blog Posts</h1>
     <div class="${postsId}-grid">
-        ${posts.map((post) => SinglePost(post)).join('')}
+        ${posts.map((post) => SinglePost(post)).join("")}
     </div>
 </div>
 <script>${PostsScript}</script>

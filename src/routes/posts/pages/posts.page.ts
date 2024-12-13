@@ -1,12 +1,15 @@
-import { Footer } from '../../../components/footer.ts';
-import { Header } from '../../../components/header.ts';
+import { Footer } from "../../../components/footer.ts";
+import { Header } from "../../../components/header.ts";
 
 type PostsLayoutProps = {
-  title: string;
-  content: string;
+	title: string;
+	content: string;
 };
 
-export const PostsPage = ({ title, content }: PostsLayoutProps) => /*html*/ `<!DOCTYPE html>
+export const PostsPage = ({
+	title,
+	content,
+}: PostsLayoutProps): string => /*html*/ `<!DOCTYPE html>
 <html>
 <head>
   <title>${title} - Blog</title>

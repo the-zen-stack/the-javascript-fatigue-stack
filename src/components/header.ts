@@ -1,4 +1,4 @@
-export const Header = () => /*html*/ `
+export const Header = (): string => /*html*/ `
 <nav class="navbar">
     <div class="nav-content">
         <a href="/" class="nav-brand">Blog</a>

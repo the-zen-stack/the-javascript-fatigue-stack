@@ -1,4 +1,4 @@
-import { createSelector } from '../../../core/id.core.ts';
+import { createSelector } from "../../../core/id.core.ts";
 
 const NewPostScript = /*js*/ `
   const form = document.querySelector('#newPostForm');
@@ -32,7 +32,7 @@ const NewPostScript = /*js*/ `
   }
 `;
 
-const newPostId = createSelector('new-post');
+const newPostId = createSelector("new-post");
 
 const NewPostStyle = /*css*/ `
 .${newPostId} {
@@ -48,14 +48,9 @@ const NewPostStyle = /*css*/ `
   color: #2c3e50;
   margin-bottom: 2rem;
   text-align: center;
-}
-
-.${newPostId} .btn {
-  width: 100%;
-  margin-top: 1rem;
 }`;
 
-export const NewPost = () => /*html*/ `
+export const NewPost = (): string => /*html*/ `
 <div class="${newPostId}">
   <h1>Create New Post</h1>
   <form method="POST" action="/new-post" id="newPostForm">
