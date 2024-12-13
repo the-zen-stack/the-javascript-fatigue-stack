@@ -1,1 +1,1 @@
-import './post.component.ts';
+import './post.template.ts';

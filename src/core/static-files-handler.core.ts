@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import { extname, join } from 'node:path';
+import { extname } from 'node:path';
 import * as ts from 'typescript';
 
 const mimeTypes: Record<string, string> = {
@@ -23,28 +23,6 @@ export class StaticFilesHandler {
   constructor() {
     // Check if the environment is in production mode
     this.enableCache = process.env.NODE_ENV === 'production';
-  }
-
-  serveFiles(
-    files: string[],
-    {
-      prefix = '',
-      dirName = __dirname,
-    }: {
-      prefix?: string;
-      dirName?: string;
-    }
-  ): Record<string, (req: IncomingMessage, res: ServerResponse) => Promise<void>> {
-    const result = files.reduce((accumulator, currentValue) => {
-      return {
-        ...accumulator,
-        [`GET ${prefix}${currentValue}`]: async (req, res) => {
-          return this.serve(req, res, join(dirName, currentValue));
-        },
-      };
-    }, {});
-
-    return result;
   }
 
   async serve(req: IncomingMessage, res: ServerResponse, urlPath: string): Promise<void> {
@@ -71,6 +49,7 @@ export class StaticFilesHandler {
         return;
       }
 
+      console.log('#', filePath);
       const content = await readFile(filePath);
 
       // Set caching headers based on environment

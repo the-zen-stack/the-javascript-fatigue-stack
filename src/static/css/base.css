@@ -1,4 +1,4 @@
-@import 'colors.css';
+@import './colors.css';
 @import 'buttons.css';
 @import 'navigation.css';
 @import 'forms.css';
@@ -18,6 +18,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Layout */
@@ -59,42 +62,6 @@ textarea {
   resize: vertical;
 }
 
-.btn {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 1rem 1.75rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all var(--transition-speed) ease;
-  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
-}
-
-.btn:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
-}
-
-.btn-like {
-  background-color: #e74c3c;
-  color: var(--white);
-  padding: 0.75rem 1.25rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 1.25rem;
-  transition: background-color var(--transition-speed) ease;
-}
-
-.btn-like:hover {
-  background-color: #c0392b;
-}
-
 /* Footer */
 .footer {
   text-align: center;
@@ -113,9 +80,5 @@ textarea {
   .container {
     width: 95%;
     padding: 1rem;
-  }
-
-  .posts-grid {
-    grid-template-columns: 1fr;
   }
 }

@@ -11,8 +11,8 @@ export const showError = (message) => {
 
 if (form) {
   form.addEventListener('submit', (e) => {
-    const title = document.querySelector('#title').value;
-    const content = document.querySelector('#content').value;
+    const title = document.querySelector<HTMLInputElement>('#title')?.value;
+    const content = document.querySelector<HTMLInputElement>('#content')?.value;
 
     if (!validateMinLength(title, 3)) {
       e.preventDefault();
