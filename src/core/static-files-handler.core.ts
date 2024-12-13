@@ -33,7 +33,6 @@ export class StaticFilesHandler {
       return {
         ...accumulator,
         [`GET ${prefix}${currentValue}`]: async (req, res) => {
-          console.log('@@');
           return this.serve(req, res, join(dirName, currentValue));
         },
       };
@@ -43,7 +42,6 @@ export class StaticFilesHandler {
   }
 
   async serve(req: IncomingMessage, res: ServerResponse, urlPath: string): Promise<void> {
-    console.log('####');
     try {
       const filePath = urlPath;
       const ext = extname(urlPath).toLowerCase();
