@@ -53,16 +53,24 @@ const NewPostStyle = /*css*/ `
 }
 
 .${btnId} {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   padding: 0.5rem;
   border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.${btnId}:hover {
+  transition: all 0.3s;
+  background: var(--color-primary-variant);
+  color: var(--color-text-primary-contrast);
 }
 `;
 
 export const NewPost = (): string => /*html*/ `
 <div class="${newPostId}">
   <h1>Create New Post</h1>
-  <form method="POST" action="/new-post" id="newPostForm">
+  <form method="POST" action="/posts/new-post" id="newPostForm">
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" id="title" name="title" placeholder="Post Title" required>

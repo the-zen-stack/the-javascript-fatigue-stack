@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { parse } from "node:url";
 import { StaticFilesHandler } from "../core/static-files-handler.core.ts";
 import { postsRoutes } from "./posts/posts.routes.ts";
+import { homeRoutes } from "./home/home.routes.ts";
 
 const __dirname = new URL(".", import.meta.url).pathname;
 
@@ -25,6 +26,7 @@ export class Router {
 			(req: IncomingMessage, res: ServerResponse) => Promise<void>
 		> = {
 			...postsRoutes,
+			...homeRoutes,
 		};
 
 		const route = `${method} ${path}`;

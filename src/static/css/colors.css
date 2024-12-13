@@ -12,6 +12,7 @@
     
     /* Text Colors */
     --color-text-primary: light-dark(#212121, #f5f5f5);
+    --color-text-primary-contrast: light-dark(#f5f5f5, #f5f5f5);
     --color-text-secondary: light-dark(#424242, #b0b0b0);
     
     /* Semantic Colors */

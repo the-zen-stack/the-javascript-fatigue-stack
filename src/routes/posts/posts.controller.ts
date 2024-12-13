@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { NewPost } from "./components/new-post.ts";
 import { Posts } from "./components/posts.ts";
-import { PostsPage } from "./pages/posts.page.ts";
+import { PostsPage } from "./posts.view.ts";
 import { PostModel } from "./posts.model.ts";
 
 const postModel = new PostModel();
@@ -38,7 +38,7 @@ export class PostController {
 				formData.get("content") ?? "",
 			);
 
-			res.writeHead(302, { Location: "/" });
+			res.writeHead(302, { Location: "/posts" });
 			res.end();
 		});
 	}

@@ -1,5 +1,5 @@
-import { Footer } from "../../../components/footer.ts";
-import { Header } from "../../../components/header.ts";
+import { Footer } from "../../components/footer.ts";
+import { Header } from "../../components/header.ts";
 
 type PostsLayoutProps = {
 	title: string;
