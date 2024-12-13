@@ -1,4 +1,4 @@
-import type { Post } from '../types/index.ts';
+import { type Post } from './posts.types.ts';
 
 export class PostModel {
   private posts: Post[];

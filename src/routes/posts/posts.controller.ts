@@ -1,20 +1,23 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import { PostModel } from '../models/Post.ts';
-import { View } from '../utils/view.ts';
+import { PostModel } from './posts.model.ts';
+import { PostsView } from './posts.view.ts';
 
-class PostController {
-  async home(req: IncomingMessage, res: ServerResponse): Promise<void> {
-    const postModel = new PostModel();
+const postModel = new PostModel();
+
+export class PostController {
+  async posts(req: IncomingMessage, res: ServerResponse): Promise<void> {
     const posts = postModel.getAllPosts();
-    const view = new View();
-    const html = await view.render('home', { posts });
+
+    const view = new PostsView();
+    const html = await view.renderPosts({ posts });
+
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.end(html);
   }
 
   async newPostForm(req: IncomingMessage, res: ServerResponse): Promise<void> {
-    const view = new View();
-    const html = await view.render('new-post');
+    const view = new PostsView();
+    const html = await view.renderNewPostForm();
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.end(html);
   }
@@ -27,12 +30,9 @@ class PostController {
 
     req.on('end', () => {
       const formData = new URLSearchParams(body);
-      const postModel = new PostModel();
       postModel.addPost(formData.get('title') ?? '', formData.get('content') ?? '');
       res.writeHead(302, { Location: '/' });
       res.end();
     });
   }
 }
-
-export const postController = new PostController();

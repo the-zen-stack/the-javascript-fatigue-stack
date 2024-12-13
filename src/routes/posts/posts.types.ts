@@ -6,8 +6,5 @@ export interface Post {
 }
 
 export interface ViewData {
-  posts?: Post[];
-  title?: string;
-  content?: string;
-  page?: string;
+  posts: Post[];
 }

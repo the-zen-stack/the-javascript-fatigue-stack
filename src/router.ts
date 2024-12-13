@@ -1,7 +1,7 @@
-import { parse } from 'node:url';
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import { postController } from '../controllers/postController.ts';
-import { StaticController } from '../controllers/staticController.ts';
+import { parse } from 'node:url';
+import { postsRoutes } from './routes/posts/posts.routes.ts';
+import { staticRoutes } from './routes/static/staticRoutes.ts';
 
 export class Router {
   async handle(req: IncomingMessage, res: ServerResponse): Promise<void> {
@@ -9,18 +9,13 @@ export class Router {
     const path = parsedUrl.pathname ?? '/';
     const method = req.method ?? 'GET';
 
-    // Static file handling
-    if (path.startsWith('/static/')) {
-      const staticController = new StaticController();
-      return staticController.serveStatic(req, res, path);
-    }
-
     // Routes
     const routes: Record<string, (req: IncomingMessage, res: ServerResponse) => Promise<void>> = {
-      'GET /': postController.home.bind(postController),
-      'GET /new': postController.newPostForm.bind(postController),
-      'POST /new': postController.createPost.bind(postController),
+      ...postsRoutes,
+      ...staticRoutes,
     };
+
+    console.log('routes', routes);
 
     const route = `${method} ${path}`;
     const handler = routes[route];

@@ -1,10 +1,7 @@
 import { readFile } from 'node:fs/promises';
-import { extname, join } from 'node:path';
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import { fileURLToPath } from 'node:url';
+import { extname, join } from 'node:path';
 import * as ts from 'typescript';
-
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 const mimeTypes: Record<string, string> = {
   '.css': 'text/css',
@@ -19,12 +16,36 @@ const mimeTypes: Record<string, string> = {
   '.map': 'application/json',
 };
 
-export class StaticController {
+export class StaticFilesHandler {
   private compilationCache: Map<string, string> = new Map();
 
-  async serveStatic(req: IncomingMessage, res: ServerResponse, urlPath: string): Promise<void> {
+  serveFiles(
+    files: string[],
+    {
+      prefix = '',
+      dirName = __dirname,
+    }: {
+      prefix?: string;
+      dirName?: string;
+    }
+  ): Record<string, (req: IncomingMessage, res: ServerResponse) => Promise<void>> {
+    const result = files.reduce((accumulator, currentValue) => {
+      return {
+        ...accumulator,
+        [`GET ${prefix}${currentValue}`]: async (req, res) => {
+          console.log('@@');
+          return this.serve(req, res, join(dirName, currentValue));
+        },
+      };
+    }, {});
+
+    return result;
+  }
+
+  async serve(req: IncomingMessage, res: ServerResponse, urlPath: string): Promise<void> {
+    console.log('####');
     try {
-      const filePath = join(__dirname, '../', urlPath);
+      const filePath = urlPath;
       const ext = extname(urlPath).toLowerCase();
 
       // Special handling for TypeScript compilation
