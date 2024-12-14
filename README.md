@@ -50,20 +50,18 @@ The-Zen-Stack/
 
 ## 🛠️ Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/the-zen-stack.git
-   cd the-zen-stack
-   ```
+1. Create a new repository by clicking here:
+   ![image](https://github.com/user-attachments/assets/b23e2aaa-9ce1-4459-b791-ad104f4d0773)
 
-2. Install development dependencies (optional):
+
+2. Install dev development dependencies(any package installer should work here):
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. Run the development server:
    ```bash
-   node server.js
+   pnpm run dev
    ```
 
 4. Open your browser and navigate to:
@@ -76,12 +74,7 @@ The-Zen-Stack/
 - Use the `src/` directory to organize your application logic.
 - Add new features in the `routes/` folder and follow the MVC pattern.
 - Place reusable components in the `components/` subfolders.
-- Add static assets like images, CSS, and JavaScript to the `static/` directory.
-
-## 🖼️ Live Demo
-
-Explore the live version of The Javascript Fatigue Stack here:
-[The Javascript Fatigue Stack GitHub Page](https://<your-username>.github.io/the-zen-stack/)
+- Add static assets like images and CSS to the `static/` directory.
 
 ## 🤝 Contributing
 
