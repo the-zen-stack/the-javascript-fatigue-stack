@@ -194,32 +194,30 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
         <section class="zen-gradient">
             <h2>What is the Zen Stack?</h2>
             <div class="grid">
-                <div>
-                    <p>
-                        This is a minimalistic Node.js server template with no runtime dependencies. 
-                        The only development dependencies are TypeScript (to transpile TypeScript files to Javascript files when running in the client side) and <a href="https://biomejs.dev/" target="_blank" rel="noopener noreferrer">Biome</a> (an ESLint alternative, you can also replace it with prettier & eslint).
-                        It follows a simple MVC architecture, providing a clear example of how to structure your code. 
-                    </p>
-                    <br />
-                    <p>
-                        The template demonstrates how to use native Node.js features to build a server 
-                        and Vanilla JavaScript for the frontend. It includes examples of "server-side rendering" 
-                        and "client-side rendering" and showcases how to create reusable frontend components 
-                        with just TypeScript, CSS, and HTML.
-                    </p>
-                    <br />
-                    <p>
-                        With this template, you have complete control over your code—no frameworks, no unnecessary dependencies. 
-                        It’s a robust starting point for any project, capable of achieving everything you’d expect 
-                        from modern frameworks like Next.js or Express.
-                    </p>
-                    <ul class="features-list">
-                        <li>Zero external dependencies</li>
-                        <li>Pure MVC architecture</li>
-                        <li>Native browser and NodeJS features</li>
-                        <li>No complex build tools</li>
-                    </ul>
-                </div>
+            <section>
+                <p>
+                    This is a minimalistic Node.js server template with no runtime dependencies. 
+                    The only development dependencies are <code>@types/node</code> (for type definitions to improve development experience) 
+                    and Biome (an ESLint alternative, which can also be replaced with Prettier and ESLint). 
+                    It follows a simple MVC architecture, providing a clear example of how to structure your code.
+                </p>
+            </section>
+            <br />
+            <section>
+                <p>
+                    The template demonstrates how to use native Node.js features to build a server and Vanilla JavaScript for the frontend. 
+                    It includes examples of both <strong>server-side rendering</strong> and <strong>client-side rendering</strong> 
+                    while showcasing how to create reusable frontend components using only JavaScript, CSS, and HTML.
+                </p>
+            </section>
+            <br />
+            <section>
+                <p>
+                    With this template, you have complete control over your code—no frameworks, no unnecessary dependencies. 
+                    It’s a robust starting point for any project, capable of achieving everything you’d expect from modern frameworks 
+                    like Next.js or Express.
+                </p>
+            </section>
             </div>
         </section>
 
