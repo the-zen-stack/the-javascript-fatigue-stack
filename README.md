@@ -1,6 +1,6 @@
-# The Zen Stack
+# The Javascript Fatigue Stack
 
-Welcome to **The Zen Stack**, a minimalistic Node.js server template designed to eliminate JavaScript fatigue and simplify web development. With no runtime dependencies and a clean MVC architecture, it empowers developers to create robust applications with full control over their code.
+Welcome to **The Javascript Fatigue Stack**, a minimalistic Node.js server template designed to eliminate JavaScript fatigue and simplify web development. With no runtime dependencies and a clean MVC architecture, it empowers developers to create robust applications with full control over their code.
 
 ## 🚀 Features
 
@@ -75,12 +75,12 @@ The-Zen-Stack/
 
 ## 🖼️ Live Demo
 
-Explore the live version of The Zen Stack here:
-[The Zen Stack GitHub Page](https://<your-username>.github.io/the-zen-stack/)
+Explore the live version of The Javascript Fatigue Stack here:
+[The Javascript Fatigue Stack GitHub Page](https://<your-username>.github.io/the-zen-stack/)
 
 ## 🤝 Contributing
 
-We welcome contributions to improve The Zen Stack! Here's how you can help:
+We welcome contributions to improve The Javascript Fatigue Stack! Here's how you can help:
 
 1. Fork the repository.
 2. Create a new branch:
@@ -103,4 +103,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Happy coding with **The Zen Stack**! 🎉
+Happy coding with **The Javascript Fatigue Stack**! 🎉

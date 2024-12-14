@@ -1,7 +1,8 @@
+import type { IncomingMessage, ServerResponse } from "node:http";
 import { HomePage } from "./home.view.ts";
 
 export class HomeController {
-    async home(req, res) {
+    async home(req: IncomingMessage, res: ServerResponse) {
 
         const html = HomePage();
 

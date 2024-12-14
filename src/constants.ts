@@ -1,1 +1,1 @@
-export const APP_TITLE = 'THE ZEN STACK';
+export const APP_TITLE = 'The Javascript Fatigue Stack';

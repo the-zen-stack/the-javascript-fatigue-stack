@@ -11,6 +11,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.17.10
     version: 20.17.10
+  typescript:
+    specifier: ^5.7.2
+    version: 5.7.2
 
 packages:
 
@@ -106,6 +109,12 @@ packages:
     resolution: {integrity: sha512-/jrvh5h6NXhEauFFexRin69nA0uHJ5gwk4iDivp/DeoEua3uwCUto6PC86IpRITBOs4+6i2I56K5x5b6WYGXHA==}
     dependencies:
       undici-types: 6.19.8
+    dev: true
+
+  /typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
     dev: true
 
   /undici-types@6.19.8:

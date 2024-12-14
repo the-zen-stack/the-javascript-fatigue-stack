@@ -8,7 +8,7 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
   <title>Home page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Zen Stack - Eliminate JavaScript Fatigue</title>
+    <title>The Javascript Fatigue Stack - Eliminate JavaScript Fatigue</title>
     <style>
         :root {
             --primary-color: #1e40af;
@@ -185,14 +185,14 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
 <body>
     <div class="container">
         <header class="header text-center">
-            <h1>The Zen Stack</h1>
+            <h1>The Javascript Fatigue Stack</h1>
             <p>
                 A full stack <span id="framework">framework</span> <b>template</b> for building web applications with <span>NodeJS</span> and <span>TypeScript</span> with <b>0 runtime dependencies</b>.
             </p>
         </header>
 
         <section class="zen-gradient">
-            <h2>What is the Zen Stack?</h2>
+            <h2>What is The Javascript Fatigue Stack?</h2>
             <div class="grid">
             <section>
                 <p>
@@ -248,9 +248,19 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
             </div>
         </section>
 
-  <main class="container">
-    hello world
-  </main>
+        <section class="zen-gradient">
+            <h2>Our Philosophy</h2>
+            <p>
+                The Javascript Fatigue Stack is inspired by the belief that simplicity leads to clarity. We aim to reduce the mental overhead that comes with 
+                complex frameworks and tools, letting developers focus on their ideas rather than the intricacies of dependencies. 
+                By embracing minimalism, we strive to provide a foundation that is both powerful and adaptable to any project.
+            </p>
+            <p>
+                We believe in the principle of "less is more" and encourage developers to question the necessity of every dependency, 
+                every abstraction, and every line of code. Our goal is to foster creativity, performance, and maintainability through simplicity.
+            </p>
+        </section>
+
         <section class="cta">
             <h2>Ready to Embrace Simplicity?</h2>
             <div class="button-group">
@@ -260,7 +270,7 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
         </section>
 
         <footer>
-            <p>© 2024 The Zen Stack. Simplicity in Web Development.</p>
+            <p>© 2024 The Javascript Fatigue Stack. Simplicity in Web Development.</p>
         </footer>
     </div>
 </body>
