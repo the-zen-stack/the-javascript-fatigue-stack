@@ -59,6 +59,7 @@ The-Zen-Stack/
    ```
    http://localhost:3000
    ```
+![image](https://github.com/user-attachments/assets/9aeaf68f-1461-483f-9fbd-53895b050e03)
 
 ## 🔧 Usage
 
