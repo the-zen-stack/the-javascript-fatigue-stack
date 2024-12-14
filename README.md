@@ -11,7 +11,7 @@ Welcome to **The Javascript Fatigue Stack**, a minimalistic Node.js server templ
 ![Screenshot 2024-12-14 at 22 36 15](https://github.com/user-attachments/assets/7e2519dc-e2dc-45e1-9485-7a18caf155a6)
 
 ## Frontend Components With HTML, CSS, Javascript
-<img width="560" alt="image" src="https://github.com/user-attachments/assets/7bed3ab3-2177-4abb-b37d-9f69a6c118c6" />
+![image](https://github.com/user-attachments/assets/dbfbce86-4117-464a-913b-eab2c0bfa068)
 
 note: Syntax highlight can be done using [this vscode extension](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
