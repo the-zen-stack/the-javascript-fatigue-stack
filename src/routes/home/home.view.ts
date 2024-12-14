@@ -8,7 +8,7 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
   <title>Home page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Javascript Fatigue Stack - Eliminate JavaScript Fatigue</title>
+    <title>The "Javascript Fatigue" Stack - Eliminate JavaScript Fatigue</title>
     <style>
         :root {
             --primary-color: #1e40af;
@@ -147,6 +147,7 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
 
         .btn-primary {
             background-color: var(--secondary-color);
+            margin-top: 1rem;
             color: white;
         }
 
@@ -185,20 +186,22 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
 <body>
     <div class="container">
         <header class="header text-center">
-            <h1>The Javascript Fatigue Stack</h1>
+            <h1>The "Javascript Fatigue" Stack</h1>
             <p>
                 A full stack <span id="framework">framework</span> <b>template</b> for building web applications with <span>NodeJS</span> and <span>TypeScript</span> with <b>0 runtime dependencies</b>.
             </p>
         </header>
 
         <section class="zen-gradient">
-            <h2>What is The Javascript Fatigue Stack?</h2>
+            <h2>What is The "Javascript Fatigue" Stack?</h2>
             <div class="grid">
+
             <section>
                 <p>
                     This is a minimalistic Node.js server template with no runtime dependencies. 
-                    The only development dependencies are <code>@types/node</code> (for type definitions to improve development experience) 
-                    and Biome (an ESLint alternative, which can also be replaced with Prettier and ESLint). 
+                    The only development dependencies are TypeScript (for type safety and development efficiency), 
+                    @types/node (for Node.js type definitions), and 
+                    Biome (an ESLint alternative, which can also be easily replaced with Prettier and ESLint if you like it better). 
                     It follows a simple MVC architecture, providing a clear example of how to structure your code.
                 </p>
             </section>
@@ -219,39 +222,15 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
                 </p>
             </section>
             </div>
-        </section>
 
-        <section>
-            <h2 class="benefits-title">Key Benefits</h2>
-            <div class="benefits">
-                <div class="benefit-card">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <h3>Performance</h3>
-                    <p>Lightweight and fast with no unnecessary overhead</p>
-                </div>
-                <div class="benefit-card">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                    </svg>
-                    <h3>Simplicity</h3>
-                    <p>Easy to learn and maintain with minimal configuration</p>
-                </div>
-                <div class="benefit-card">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                    </svg>
-                    <h3>Developer Experience</h3>
-                    <p>Focus on writing code, not managing dependencies</p>
-                </div>
-            </div>
+            <a href="#" class="btn btn-primary">Get Started</a>
+
         </section>
 
         <section class="zen-gradient">
             <h2>Our Philosophy</h2>
             <p>
-                The Javascript Fatigue Stack is inspired by the belief that simplicity leads to clarity. We aim to reduce the mental overhead that comes with 
+                The "Javascript Fatigue" Stack is inspired by the belief that simplicity leads to clarity. We aim to reduce the mental overhead that comes with 
                 complex frameworks and tools, letting developers focus on their ideas rather than the intricacies of dependencies. 
                 By embracing minimalism, we strive to provide a foundation that is both powerful and adaptable to any project.
             </p>
@@ -261,16 +240,17 @@ export const HomePage = (): string => /*html*/ `<!DOCTYPE html>
             </p>
         </section>
 
-        <section class="cta">
-            <h2>Ready to Embrace Simplicity?</h2>
-            <div class="button-group">
-                <a href="#" class="btn btn-primary">Get Started</a>
-                <a href="#" class="btn btn-secondary">View Documentation</a>
-            </div>
+        <section class="zen-gradient">
+            <h2>Why Only JavaScript instead of TypeScript in The Frontend?</h2>
+            <p>
+                The "Javascript Fatigue" Stack uses only JavaScript for the frontend to demonstrate that modern web applications can be built without the need for 
+                complex build tools or transpilers. By leveraging native browser features and APIs, we can create dynamic and interactive user interfaces 
+                without the overhead of additional tooling.
+            </p>
         </section>
 
         <footer>
-            <p>© 2024 The Javascript Fatigue Stack. Simplicity in Web Development.</p>
+            <p>© 2024 The "Javascript Fatigue" Stack. Simplicity in Web Development.</p>
         </footer>
     </div>
 </body>
