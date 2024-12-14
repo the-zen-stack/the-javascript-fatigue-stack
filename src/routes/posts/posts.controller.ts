@@ -38,7 +38,7 @@ export class PostController {
 				formData.get("content") ?? "",
 			);
 
-			res.writeHead(302, { Location: "/posts" });
+			res.writeHead(302, { Location: "/" });
 			res.end();
 		});
 	}
