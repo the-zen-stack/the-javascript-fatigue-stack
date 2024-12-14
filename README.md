@@ -19,8 +19,6 @@ note: Syntax highlight can be done using [this vscode extension](https://marketp
 
 ```
 The-Zen-Stack/
-├── .github/                    # GitHub configuration files
-├── node_modules/               # Node.js dependencies (if any)
 ├── src/                        # Source code
 │   ├── components/             # Frontend components
 │   ├── core/                   # Core utilities and handlers
@@ -38,14 +36,7 @@ The-Zen-Stack/
 │   │       ├── posts.routes.ts     # Posts routing logic
 │   │       ├── posts.view.ts       # Posts view
 │   │       └── posts.types.ts      # Type definitions for posts
-├── static/                     # Static assets
-│   ├── css/                    # CSS stylesheets
-│   │   ├── base.css            # Base styles
-│   │   ├── buttons.css         # Button styles
-│   │   ├── colors.css          # Color palette
-│   │   ├── forms.css           # Form styles
-│   │   └── navigation.css      # Navigation styles
-│   └── constants.ts            # Static constants
+├── static/                     # Static asset
 ```
 
 ## 🛠️ Installation
