@@ -2,13 +2,18 @@
 
 Welcome to **The Javascript Fatigue Stack**, a minimalistic Node.js server template designed to eliminate JavaScript fatigue and simplify web development. With no runtime dependencies and a clean MVC architecture, it empowers developers to create robust applications with full control over their code.
 
-## 🚀 Features
+# 🚀 Features
 
-- **No Runtime Dependencies**: Build lightweight, fast applications with zero overhead.
-- **Native Node.js**: Uses pure Node.js for server-side functionality.
-- **Vanilla Frontend**: Write reusable components with only JavaScript, CSS, and HTML.
-- **Server-Side & Client-Side Rendering**: Demonstrates both approaches seamlessly.
-- **Simplicity**: Easy to understand and maintain, making it perfect for new and experienced developers alike.
+## No Runtime Dependencies
+<img width="943" alt="Screenshot 2024-12-14 at 22 02 36" src="https://github.com/user-attachments/assets/ba265c00-8fb2-4859-a57e-1c28e426c701" />
+
+## Battle Tested Model - View - Controller (MVC) Architecture for Web Applications
+<img width="336" alt="Screenshot 2024-12-14 at 22 10 54" src="https://github.com/user-attachments/assets/d5d5b78c-1759-4823-aff4-d82513ff7886" />
+
+## Frontend Components With HTML, CSS, Javascript
+<img width="560" alt="image" src="https://github.com/user-attachments/assets/7bed3ab3-2177-4abb-b37d-9f69a6c118c6" />
+
+note: Syntax highlight can be done using [this vscode extension](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
 ## 📂 Project Structure
 
