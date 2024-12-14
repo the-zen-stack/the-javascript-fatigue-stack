@@ -1,6 +1,6 @@
 export const Footer = (): string => /*html*/ `
 <footer class="footer">
-    <p>&copy; 2024 Blog. All rights reserved.</p>
+    <p>This is indeed a footer</p>
 </footer>
 <style>
 .footer {
