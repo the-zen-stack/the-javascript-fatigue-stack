@@ -8,7 +8,7 @@ Welcome to **The Javascript Fatigue Stack**, a minimalistic Node.js server templ
 <img width="943" alt="Screenshot 2024-12-14 at 22 02 36" src="https://github.com/user-attachments/assets/ba265c00-8fb2-4859-a57e-1c28e426c701" />
 
 ## Battle Tested Model - View - Controller (MVC) Architecture for Web Applications
-<img width="336" alt="Screenshot 2024-12-14 at 22 10 54" src="https://github.com/user-attachments/assets/d5d5b78c-1759-4823-aff4-d82513ff7886" />
+![Screenshot 2024-12-14 at 22 36 15](https://github.com/user-attachments/assets/7e2519dc-e2dc-45e1-9485-7a18caf155a6)
 
 ## Frontend Components With HTML, CSS, Javascript
 <img width="560" alt="image" src="https://github.com/user-attachments/assets/7bed3ab3-2177-4abb-b37d-9f69a6c118c6" />
@@ -54,7 +54,7 @@ The-Zen-Stack/
    ![image](https://github.com/user-attachments/assets/b23e2aaa-9ce1-4459-b791-ad104f4d0773)
 
 
-2. Install dev development dependencies(any package installer should work here):
+2. Install dev development dependencies with pnpm or any other package manager:
    ```bash
    pnpm install
    ```
