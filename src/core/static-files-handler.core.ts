@@ -1,7 +1,6 @@
 import { readFile } from "node:fs/promises";
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { extname } from "node:path";
-import * as ts from "typescript";
 
 const mimeTypes: Record<string, string> = {
 	".css": "text/css",
@@ -34,28 +33,6 @@ export class StaticFilesHandler {
 			const filePath = urlPath;
 			const ext = extname(urlPath).toLowerCase();
 
-			// Special handling for TypeScript compilation
-			if (ext === ".ts" && !urlPath.includes(".d.ts")) {
-				const compiledContent = await this.compileTypeScript(filePath);
-
-				// Set caching headers only in production
-				const headers: Record<string, string> = {
-					"Content-Type": "text/javascript",
-				};
-				if (this.enableCache) {
-					headers["Cache-Control"] = "public, max-age=31536000, immutable";
-				} else {
-					headers["Cache-Control"] = "no-cache, no-store, must-revalidate";
-					headers.Pragma = "no-cache";
-					headers.Expires = "0";
-				}
-
-				res.writeHead(200, headers);
-				res.end(compiledContent);
-				return;
-			}
-
-			console.log("#", filePath);
 			const content = await readFile(filePath);
 
 			// Set caching headers based on environment
@@ -86,35 +63,4 @@ export class StaticFilesHandler {
 		}
 	}
 
-	private async compileTypeScript(filePath: string): Promise<string> {
-		// Check cache first (only if caching is enabled)
-		if (this.enableCache && this.compilationCache.has(filePath)) {
-			const cachedContent = this.compilationCache.get(filePath);
-			if (cachedContent) {
-				return cachedContent;
-			}
-		}
-
-		const sourceText = await readFile(filePath, "utf-8");
-		const compilerOptions: ts.CompilerOptions = {
-			module: ts.ModuleKind.ESNext,
-			target: ts.ScriptTarget.ES2020,
-			strict: false,
-			esModuleInterop: true,
-			skipLibCheck: true,
-			moduleResolution: ts.ModuleResolutionKind.NodeNext,
-		};
-
-		const transpileResult = ts.transpileModule(sourceText, {
-			compilerOptions: compilerOptions,
-			fileName: filePath,
-		});
-
-		// Cache the compiled result only in production
-		if (this.enableCache) {
-			this.compilationCache.set(filePath, transpileResult.outputText);
-		}
-
-		return transpileResult.outputText;
-	}
 }
